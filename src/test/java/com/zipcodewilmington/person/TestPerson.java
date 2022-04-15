@@ -10,8 +10,8 @@ public class TestPerson {
     @Test
     public void testDefaultConstructor() {
         // Given
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        String expectedName = "Isaiah";
+        Integer expectedAge = 21;
 
         // When
         Person person = new Person();
@@ -22,6 +22,77 @@ public class TestPerson {
 
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedAge, actualAge);
+    }
+
+    @Test
+    public void testFingersVariable() {
+        // Given
+        String expectedFingers = "Middle";
+
+        // When
+        Person person = new Person();
+
+        // Then
+        String actualFingers = person.getFingers();
+
+        Assert.assertEquals(expectedFingers, actualFingers);
+
+    }
+
+    @Test
+    public void testEyesVariable() {
+        // Given
+        String expectedEyes = "Brown";
+        // When
+        Person person = new Person();
+        // Then
+        String actualEyes = person.getEyes();
+        Assert.assertEquals(expectedEyes, actualEyes);
+    }
+
+    @Test
+    public void testTattoosVariable() {
+        // Given
+        Integer expectedTattoos = 1;
+
+        // When
+        Person person = new Person();
+
+        // Then
+        Integer actualTattoos = person.getTattoos();
+
+        Assert.assertEquals(expectedTattoos, actualTattoos);
+    }
+
+    @Test
+    public void testHairVariable() {
+        // Given
+        String expectedHair = "Black";
+
+        // When
+        Person person = new Person();
+
+        // Then
+        String actualHair = person.getHair();
+
+        Assert.assertEquals(expectedHair, actualHair);
+
+
+    }
+
+    @Test
+    public void testPiercingsVariable(){
+        // Given
+        Integer expectedPiercings = 4;
+
+        // When
+        Person person = new Person();
+
+        // Then
+        Integer actualPiercings = person.getPiercings();
+
+        Assert.assertEquals(expectedPiercings, actualPiercings);
+
     }
 
     @Test
